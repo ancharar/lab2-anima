@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Consolas", monospace;
+    color: #233644;
+    background: linear-gradient(to right, #E6ECDE, #CDE0C9);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(90deg, #2183A6, #2183A6);
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 20px 20px;
+}
+
+h1 {
+    font-size: 72px;
+    font-family: "Consolas", monospace;
+    color: #e5ece4;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+.filter, #filter, #sort {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+p {
+    margin: 5px 0;
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    border: 2px solid #2183A6;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #233644;
+    outline: none;
+}
+
+button, input[type="button"] {
+    font-size: 20px;
+    font-family: "Consolas", monospace;
+    background-color: #2183A6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover, input[type="button"]:hover {
+    background-color: #2183A6;
+    transform: scale(1.05);
+}
+
+button:active, input[type="button"]:active {
+    background-color: #2183A6;
+    transform: scale(0.98);
+}
+
+.table-container {
+    width: 90%;
+    margin: auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Кнопка "Главная" в верхнем правом углу */
+div[style*="position: absolute;"] button {
+    font-size: 20px;
+    background-color: #CDE0C9;
+    color: #233644;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+div[style*="position: absolute;"] button:hover {
+    background-color: #c9e0d4;
+}

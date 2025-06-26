@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список Мультфильмов</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/sort.js"></script>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body bgcolor="#E6ECDE">
+    <div style="position: absolute; top: 20px; left: 1440px;">
+        <a href="lab5.html">
+            <button>Главная</button>
+        </a>
+    </div>
+    <header>
+        <h1>Топ 50 мультфильмов</h1>
+    </header>
+
+    <form id="data">
+      <p>Аргумент<br>
+        <label><input type="radio" name="ox" value="Режиссёр" id="firstR" checked>Режиссёр</label><br>
+        <label><input type="radio" name="ox" value="Год выпуска" id="secondR">Год выпуска</label>
+      </p>
+
+      <p>Значение<br>
+        <input type="checkbox" id="check1">
+        <label for="check1" id="tcheck">Максимальный рейтинг</label><br>
+        <input type="checkbox" id="check2">
+        <label for="check2" id="tcheck">Минимальный рейтинг</label>
+      </p>
+
+      <label for="type">Тип графика</label>
+      <select id="type" name="type">
+        <option value="first">Гистограмма</option>
+        <option value="second">Точечный</option>
+        <option value="third">График</option>
+      </select><br>
+
+      <button type="button" id="draw">Построить</button>
+      <p>
+        <span id="error-message" class="error"></span>
+      </p>
+    </form>
+
+    <svg></svg>
+
+  <form id="filter">
+    <p>
+      <label for="number">Номер:</label>
+      <input type="text" id="number">
+    </p>
+    <p>
+      <label for="movieTitle">Название фильма:</label>
+      <input type="text" id="movieTitle">
+    </p>
+    <p>
+      <label for="director">Режиссёр:</label>
+      <input type="text" id="director">
+    </p>
+    <p>
+      <label for="year">Год выпуска:</label>
+      от <input type="number" id="yearFrom">
+      до <input type="number" id="yearTo">
+    </p>
+    <p>
+      <label for="genre">Жанр:</label>
+      <input type="text" id="genre">
+    </p>
+    <p>
+      <label for="mark">Рейтинг:</label>
+      от <input type="number" id="markFrom">
+      до <input type="number" id="markTo">
+    </p>
+    <p>
+      <input type="button" value="Найти">
+      <input type="button" value="Очистить фильтры">
+  </p>
+    </form>
+
+    <form id="sort">
+        <p> Сортировать по</p>
+        <p>
+          <select id="fieldsFirst">
+          </select> 
+          по убыванию? <input  type="checkbox"  id="fieldsFirstDesc">
+        </p>
+        <p> 
+          <select id="fieldsSecond">
+          </select> 
+          по убыванию? <input  type="checkbox"  id="fieldsSecondDesc">
+        </p>
+        <p> 
+          <select id="fieldsThird"></select> 
+          по убыванию? <input type="checkbox" id="fieldsThirdDesc">
+        </p>
+        <input type="button" value="Сортировать"> 
+        <input type="button" value="Сбросить сортировку">
+    </form>
+
+    <table id="list">
+    </table>
+
+</body>
+</html>

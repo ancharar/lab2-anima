@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мультфильмы Хаяо Миядзаки</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- MDBootstrap for hover effects -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background: url("img/Group 15.png") no-repeat center center fixed;
+            background-size: cover;
+            font-family: "Consolas", monospace;
+            color: #233644;
+        }
+
+        .navbar {
+            background-color: #E6ECDE;
+            color: #233644;
+        }
+
+        .carousel-inner img {
+            height: 60vh;
+            object-fit: cover;
+        }
+
+        .item-card img {
+            transition: transform 0.3s ease;
+        }
+
+        .item-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .section-title {
+            color: #233644;
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            padding-top: 2rem;
+        }
+
+        .navbar-brand {
+            color: #233644; 
+        }
+
+        .card-body{
+            background-color: #E6ECDE;   
+        }
+
+        .card-text{
+            color: #233644; 
+        }
+
+        .card-title{
+            color: #233644;  
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Мультфильмы Хаяо Миядзаки</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="lab5.html"><b>Главная</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="popular.html"><b>Популярный мультфильм</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html"><b>Топ 50 мультфильмов</b></a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-lg-3">
+                    <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Найти</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Gallery -->
+    <div id="galleryCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img\slide1.png" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img\slide2.png" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="slide3.png" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="slide4.png" class="d-block w-100" alt="Image 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div>
+
+    <section class="content container">
+        <h2 class="section-title text-center"><b>Популярные мультфильмы</b></h2>
+        <div class="row gy-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card item-card h-100 shadow-sm">
+                    <img src="img/img3.jpg" class="card-img-top" alt="Унесенные призраками">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Унесенные призраками</b></h5>
+                        <p class="card-text">Сюжет фильма повествует о 10-летней девочке по имени Тихиро Огино, которая
+                            попадает в другой мир, населённый призраками и монстрами.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card item-card h-100 shadow-sm">
+                    <img src="img/1.3.jpg" class="card-img-top" alt="Ведьмина служба">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Ведьмина служба доставки</b></h5>
+                        <p class="card-text">Кики — 13-летняя ведьма, живущая в городке с родителями и обучающаяся своему
+                            искусству.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card item-card h-100 shadow-sm">
+                    <img src="img/img2.jpg" class="card-img-top" alt="Рыбка Поньо">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Рыбка Поньо на утёсе</b></h5>
+                        <p class="card-text">Любопытная рыбка Поньо отправляется к людям, но оказывается выброшенной на
+                            берег.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
